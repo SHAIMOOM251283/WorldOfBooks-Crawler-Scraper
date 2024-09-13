@@ -80,7 +80,7 @@ This will ensure that the script can locate your CSV files and generate the visu
    
    Open a terminal on your local machine and run the following commands:
    - git clone https://github.com/SHAIMOOM251283/WorldOfBooks-Crawler-Scraper.git
-   - cd WorldOfBooks-Crawler-&-Scraper
+   - cd WorldOfBooks-Crawler-Scraper
    
 2. **Clone the repository using VS Code's Git integration**:
    
