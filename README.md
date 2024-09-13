@@ -49,13 +49,30 @@ This approach is particularly useful when scraping a large number of pages since
 
 After the data is scraped, it's saved as a CSV file, named according to the selected category.
 
-### 4. **data_visualization.py**
+### 4. data_visualization.py
 
 Once the data has been scraped and saved, the `data_visualization.py` script generates an interactive bar chart using Plotly. The chart shows the number of items scraped in each category, providing an easy-to-understand visual summary of the data.
 
 - The CSV files are processed to count the number of items in each category.
 - A bar chart is generated with categories on the X-axis and the number of items on the Y-axis.
 - The total number of items is also displayed in the chart's title for added clarity.
+
+#### **Important: Update the Folder Path**
+
+Before running the `data_visualization.py` script, you need to update the file path to match the location where your CSV files are saved.
+
+1. Open the `data_visualization.py` script.
+2. Find the line:
+   ```python
+   self.folder_path = r"replace_with_file_path\data"
+   ```
+3. Replace `"replace_with_file_path"` with the correct path on your machine where the `data` folder is located. For example:
+   ```python
+   self.folder_path = r"C:\Users\YourUsername\Documents\WorldOfBooks Crawler Scraper\data"
+   ```
+4. Save the file and run the script.
+
+This will ensure that the script can locate your CSV files and generate the visualizations correctly.
 
 ## Usage
 
