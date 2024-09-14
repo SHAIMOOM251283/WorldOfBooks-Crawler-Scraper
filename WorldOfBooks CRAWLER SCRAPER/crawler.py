@@ -19,6 +19,9 @@ class Category:
                 category_url = urljoin(self.home_page_url, link_tag['href'])
                 category_links[category_name] = category_url
         
+        for name, url in category_links.items():
+            print(f"{name}: {url}")
+        
         return category_links
 
 class Crawler:
