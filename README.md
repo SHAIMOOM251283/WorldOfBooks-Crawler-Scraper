@@ -29,7 +29,9 @@ This script is responsible for fetching all the main categories from the World o
 
 ### 2. **selector.py**
 
-Once the categories are fetched, the `selector.py` script prompts the user to select a category. After selecting a category, the script initiates the scraping process by passing the selected category URL to the scraper.
+Once the categories are fetched, the selector.py script prompts the user to input a "keyword." The 'keyword,' also known as a 'slug,' refers to the specific term used at the end of the URL (e.g., crime-mystery), representing the category the user wishes to scrape. This keyword is then appended to the base URL to form the complete URL for that category.
+
+After the keyword is selected, the script constructs the URL and initiates the scraping process by passing it to the scraper, which retrieves and processes data from the chosen category. This allows for targeted scraping based on the user's input.
 
 ### 3. **scraper.py** (Multithreading Implementation)
 
