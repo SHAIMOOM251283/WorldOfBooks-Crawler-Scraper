@@ -4,12 +4,11 @@ class SelectCategory:
 
     def __init__(self):
         self.home_page_url = "https://www.wob.com/en-gb/category/"
-        self.category_instance = crawler.Category()  # Get category instance
-        self.category_links = self.category_instance.get_category_links()  # Fetch links
-        crawler.Crawler(self.category_links).run()  # Run crawler
-        
+        self.crawler = crawler.WebCrawler() 
+        self.crawler.run()
+
     def select_category(self):
-        selector = input("\nEnter the category: ")  
+        selector = input("\nEnter keyword (e.g. crime-mystery): ")  
         self.category = selector
         search_category = self.home_page_url + selector
         print(f"\nSearch Category: {search_category}")
